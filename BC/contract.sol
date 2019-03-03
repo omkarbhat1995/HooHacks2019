@@ -186,8 +186,8 @@ contract TrackFund is Ownable, StandardToken {
 }
 
 contract Coin is TrackFund {
-    string public name = "HSL Coins"; // name of the token
-    string public symbol = "HSL"; // ERC20 compliant 4 digit token code
+    string public name = "YAK coins"; // name of the token
+    string public symbol = "YAK"; // ERC20 compliant 4 digit token code
     uint public decimals = 18; // token has 18 digit precision
     uint public totalSupply = 1000000000000000; // total supply of 100+6 Million Tokens
     /// @notice Initializes the contract and allocates all initial tokens to the owner
