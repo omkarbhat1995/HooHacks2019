@@ -183,15 +183,15 @@
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
-                                       <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Amount" required>
+                                       <input type="text" class="form-control" id="amm1" placeholder="Amount" required>
                                     </div>
 									<div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Account Number:</label>
-                                       <input type="email" class="form-control" id="accnumb"  readonly="readonly" value="<?php echo ($acc);?>"required>
+                                       <input type="email" class="form-control" id="acc1"  readonly="readonly" value="<?php echo ($acc);?>"required>
                                     </div>
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                       <input type="password" class="form-control" id="exampleInputPassword2" required>
+                                       <input type="text" class="form-control" id="pswd1" required>
                                     </div>
                                     <div class="form-group">
                                        <button type="submit" class="btn btn-success btn-block">Donate</button>
@@ -217,18 +217,18 @@
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
-                                       <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Amount" required>
+                                       <input type="text" class="form-control" id="amm2" placeholder="Amount" required>
                                     </div>
 									<div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Account Number:</label>
-                                       <input type="email" class="form-control" id="accnumb"  readonly="readonly" value="<?php echo ($acc);?>"required>
+                                       <input type="email" class="form-control" id="acc2"  readonly="readonly" value="<?php echo ($acc);?>"required>
                                     </div>
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                       <input type="password" class="form-control" id="exampleInputPassword2" required>
+                                       <input type="text" class="form-control" id="pswd2" required>
                                     </div>
                                     <div class="form-group">
-                                       <button type="submit" class="btn btn-success btn-block">Donate</button>
+                                       <button type="button" onclick='Donate()' class="btn btn-success btn-block">Donate</button>
                                     </div>
                                  </form>
  
@@ -251,18 +251,18 @@
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
-                                       <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Amount" required>
+                                       <input type="text" class="form-control" id="amm3" placeholder="Amount" required>
                                     </div>
 									<div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Account Number:</label>
-                                       <input type="email" class="form-control" id="accnumb"  readonly="readonly" value="<?php echo ($acc);?>"required>
+                                       <input type="email" class="form-control" id="acc3"  readonly="readonly" value="<?php echo ($acc);?>"required>
                                     </div>
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                       <input type="password" class="form-control" id="exampleInputPassword2" required>
+                                       <input type="text" class="form-control" id="pswd3" required>
                                     </div>
                                     <div class="form-group">
-                                       <button type="submit" class="btn btn-success btn-block">Donate</button>
+                                       <button type="button" onclick='Donate()' class="btn btn-success btn-block">Donate</button>
                                     </div>
                                  </form>
  
@@ -287,18 +287,18 @@
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
-                                       <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Amount" required>
+                                       <input type="text" class="form-control" id="amm4" placeholder="Amount" required>
                                     </div>
 									<div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Account Number:</label>
-                                       <input type="email" class="form-control" id="accnumb"  readonly="readonly" value="<?php echo ($acc);?>"required>
+                                       <input type="email" class="form-control" id="acc4"  readonly="readonly" value="<?php echo ($acc);?>"required>
                                     </div>
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                       <input type="password" class="form-control" id="exampleInputPassword2" required>
+                                       <input type="text" class="form-control" id="pswd4" required>
                                     </div>
                                     <div class="form-group">
-                                       <button type="submit" class="btn btn-success btn-block">Donate</button>
+                                       <button type="button" onclick='Donate()' class="btn btn-success btn-block">Donate</button>
                                     </div>
                                  </form>
  
@@ -324,18 +324,18 @@
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
-                                       <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Amount" required>
+                                       <input type="text" class="form-control" id="amm5" placeholder="Amount" required>
                                     </div>
 									<div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Account Number:</label>
-                                       <input type="email" class="form-control" id="accnumb"  readonly="readonly" value="<?php echo ($acc);?>"required>
+                                       <input type="email" class="form-control" id="acc5"  readonly="readonly" value="<?php echo ($acc);?>"required>
                                     </div>
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                       <input type="password" class="form-control" id="exampleInputPassword2" required>
+                                       <input type="text" class="form-control" id="pswd5" required>
                                     </div>
                                     <div class="form-group">
-                                       <button type="submit" class="btn btn-success btn-block">Donate</button>
+                                       <button type="button" onclick='Donate()' class="btn btn-success btn-block">Donate</button>
                                     </div>
                                  </form>
  
@@ -358,18 +358,18 @@
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
-                                       <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Amount" required>
+                                       <input type="text" class="form-control" id="amm6" placeholder="Amount" required>
                                     </div>
 									<div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Account Number:</label>
-                                       <input type="email" class="form-control" id="accnumb"  readonly="readonly" value="<?php echo ($acc);?>"required>
+                                       <input type="email" class="form-control" id="acc6"  readonly="readonly" value="<?php echo ($acc);?>"required>
                                     </div>
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                       <input type="password" class="form-control" id="exampleInputPassword2" required>
+                                       <input type="text" class="form-control" id="pswd6" required>
                                     </div>
                                     <div class="form-group">
-                                       <button type="submit" class="btn btn-success btn-block">Donate</button>
+                                       <button type="button" onclick='Donate("amm6","$acc6","$pswd6")' class="btn btn-success btn-block">Donate</button>
                                     </div>
                                  </form>
  
@@ -407,6 +407,24 @@
 </body>
 
 </html>
+
+<script>
+function Donate(double amm,string acc,string pswd){
+var var1= document.getElementById("amm").value;
+var var2= document.getElementById("acc").value;
+var var3= document.getElementById("pswd").value;
+$.ajax({
+
+        type:"POST"
+        url:'http://localhost:4000/ajaxforjson/Testajax',
+        data:{Amount:var1,Account:var2,Password:var3},
+        success:success,
+		dataType: boolean
+        }
+     })
+
+}
+</script>
 
 
 
