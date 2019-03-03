@@ -118,6 +118,9 @@
             <a class="nav-link" href="login.html"><button type="submit" name="Logout"/>Logout</a>
 			</form>
           </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="edit.html">Edit</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
