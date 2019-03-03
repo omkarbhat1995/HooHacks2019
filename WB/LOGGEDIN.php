@@ -179,7 +179,7 @@
                 <h4 class="card-title">
                   <a href="#">American Civil Liberties Union Foundations</a>
                 </h4><p class="card-text" >For almost 100 years, the ACLU has worked to defend and preserve the individual rights and liberties guaranteed by the Constitution and laws of the United States.</p>
-				<h5><p>Procurement Agent: Brian J Jones LLC  Product: Attorney  Price: $2498 </p> </h5>
+				<h5><p>Procurement Agent: Brian J Jones LLC  Product: Attorney  Price: $2498 Trustworthy Factor: 4.9</p> </h5>
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
@@ -213,7 +213,7 @@
                   <a href="#">Do Something</a>
                 </h4>
                 <p class="card-text">DoSomething is a global non-profit organization with the goal of motivating young people to make positive change both online and offline through campaigns that make an impact. The organization's CEO is Aria Finger.</p>
-              <h5><p>Procurement Agent: Calmart  Product: Head Gears  Price: $750 </p> </h5>
+              <h5><p>Procurement Agent: Calmart  Product: Head Gears  Price: $750 Trustworthy Factor: 4.8</p> </h5>
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
@@ -247,7 +247,7 @@
                   <a href="#">DonorsChoose.org</a>
                 </h4>
                 <p class="card-text">DonorsChoose.org is a United Statesâ€“based nonprofit organization that allows individuals to donate directly to public school classroom projects. Founded in 2000 by former public school teacher Charles Best, DonorsChoose.org was among the first civic crowdfunding platforms of its kind.</p>
-              <h5><p>Procurement Agent: Calmart  Product: Boooks  Price: $1750 </p> </h5>
+              <h5><p>Procurement Agent: Calmart  Product: Boooks  Price: $1750 Trustworthy Factor: 4.85</p> </h5>
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
@@ -283,7 +283,7 @@
                   <a href="#">Natural Resources Defense Council</a>
                 </h4>
                 <p class="card-text">The Natural Resources Defense Council is a United States-based, non-profit international environmental advocacy group, with its headquarters in New York City and offices in Washington, D.C.; San Francisco; Los Angeles; New Delhi, India; Chicago; Bozeman, Montana; and Beijing, China.</p>
-              <h5><p>Procurement Agent: Martin And PC  Product: Attorney  Price: $23500 </p> </h5>
+              <h5><p>Procurement Agent: Martin And PC  Product: Attorney  Price: $23500 </p> Trustworthy Factor: 4.78</h5>
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
@@ -320,7 +320,7 @@
                   <a href="#">Global Giving</a>
                 </h4>
                 <p class="card-text">GlobalGiving is 501 non-profit organization based in the United States that provides a global crowdfunding platform for grassroots charitable projects. Since 2002, more than 800,000 donors on GlobalGiving have raised more than $340 million to support more than 20,000 projects in 170 countries</p>
-              <h5><p>Procurement Agent: BAYER  Product: Medicines  Price: $1147 </p> </h5>
+              <h5><p>Procurement Agent: BAYER  Product: Medicines  Price: $1147 Trustworthy Factor: 4.29</p> </h5>
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
@@ -354,7 +354,7 @@
                   <a href="#">American Heart Assosiation</a>
                 </h4>
                 <p class="card-text">The American Heart Association is a non-profit organization in the United States that funds cardiovascular medical research, educates consumers on healthy living and fosters appropriate cardiac care in an effort to reduce disability and deaths caused by cardiovascular disease and stroke.</p>
-              <h5><p>Procurement Agent: John Hopkins  Product: Surgery  Price: $3750 </p> </h5>
+              <h5><p>Procurement Agent: John Hopkins  Product: Surgery  Price: $3750 Trustworthy Factor: 4.49</p> </h5>
 								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Amount:</label>
@@ -369,7 +369,7 @@
                                        <input type="text" class="form-control" id="pswd6" required>
                                     </div>
                                     <div class="form-group">
-                                       <button type="button" onclick='Donate("amm6","$acc6","$pswd6")' class="btn btn-success btn-block">Donate</button>
+                                       <button type="button" id='release' class="btn btn-success btn-block">Donate</button>
                                     </div>
                                  </form>
  
@@ -409,21 +409,36 @@
 </html>
 
 <script>
-function Donate(double amm,string acc,string pswd){
-var var1= document.getElementById("amm").value;
-var var2= document.getElementById("acc").value;
-var var3= document.getElementById("pswd").value;
-$.ajax({
+$(document).ready(function(){
+$("#release").click(function (){
+	var var1= document.getElementById("amm6").value;
+	var var2= document.getElementById("acc6").value;
+	var var3= document.getElementById("pswd6").value;
+	$.post('http://192.168.137.210:4000/sendTrans', {
+	Amount:var1,Account:var2,Password:var3},
+	function(result){
+		console.log(result);
+		console.log(result);
+	});
+	
+});
+});
+// function Donate(double amm,string acc,string pswd){
+// var var1= document.getElementById("amm").value;
+// var var2= document.getElementById("acc").value;
+// var var3= document.getElementById("pswd").value;
+// console.lock();
+// $.ajax({
 
-        type:"POST"
-        url:'http://localhost:4000/ajaxforjson/Testajax',
-        data:{Amount:var1,Account:var2,Password:var3},
-        success:success,
-		dataType: boolean
-        }
-     })
+        // type:"POST"
+        // url:'http://:4000/sendTrans.js',
+        // data:{Amount:var1,Account:var2,Password:var3},
+        // success:success,
+		// dataType: boolean
+        // }
+     // })
 
-}
+// }
 </script>
 
 
