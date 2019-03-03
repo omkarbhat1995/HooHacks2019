@@ -14,8 +14,7 @@
     { 
         // This query retreives the user's information from the database using 
         // their username. 
-        $query = " 
-            SELECT username,password FROM users WHERE username = :username"; 
+        $query = " SELECT username,password FROM users WHERE username = :username"; 
          
         // The parameter values 
         $query_params = array( 
@@ -55,7 +54,18 @@
                 $login_ok = true; 
             } 
         } 
-         
+			define ('DB_Name','db1');
+			define ('DB_User','root');
+			define ('DB_Pass','');
+			define ('DB_Host','localhost');
+			$link= mysqli_connect(DB_Host,DB_User,'',DB_Name);
+
+		$u=$_POST['username'];
+		echo($u);
+        $sql3="INSERT INTO loggedin (username) VALUES ('$u')";
+        if (!mysqli_query($link,$sql3)){die('Error'.mysqli_error($link));}
+
+		 
         // If the user logged in successfully, then we send them to the private members-only page 
         // Otherwise, we display a login failed message and show the login form again 
         if($login_ok) 
@@ -75,7 +85,7 @@
 			session_start();
             $_SESSION['user'] = $row; 
 			
-            header("Location: LOGGEDIN.html"); 
+            header("Location: LOGGEDIN.php"); 
             //Redirect the user to the private members-only page. 
             ####################################################################die("Redirecting to: private.php"); 
         } 
